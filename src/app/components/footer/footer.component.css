@@ -1,0 +1,266 @@
+/* Rodapé */
+.rodape {
+    background-color: #000000;
+}
+
+.rodape .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 0.75rem;
+}
+
+.rodape .logomarca {
+    width: 180px;
+    height: 90px;
+}
+
+.rodape .pagamento {
+    display: flex;
+    width: auto;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape .pagamento img {
+    height: 50px;
+    padding-right: 20px;
+}
+
+.rodape .pagamento h1 {
+    font-family: "Roboto-Light";
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: white;
+    padding-right: 30px;
+}
+
+.rodape .pagamento .pag-img {
+    display: flex;
+}
+
+.rodape .row h2 {
+    width: auto;
+    font-family: "Roboto-Light";
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.rodape .linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 30px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+.rodape .linha .pagamento {
+    display: none;
+}
+
+.rodape .linha .institucional {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rodape .linha .institucional a {
+    text-decoration: none;
+    font-family: "Roboto-Light";
+    font-size: 1rem;
+    color: white;
+}
+
+.rodape .linha .title {
+    font-family: "Roboto-Light";
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.rodape .linha,
+p {
+    font-family: "Roboto-Light";
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+.rodape .linha img {
+    height: 40px;
+    padding-right: 5px;
+}
+
+.rodape .linha .whatsapp {
+    display: flex;
+}
+
+.rodape .linha .redes {
+    display: flex;
+    flex-direction: column;
+    padding-right: 65px;
+}
+
+.rodape .linha .redes img {
+    padding-bottom: 5px;
+}
+
+.rodape .row p {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto-Light";
+    font-size: 0.8rem;
+    color: white;
+}
+
+.rodape .row .redes {
+    display: none;
+}
+
+.rodape .mobile {
+    display: none;
+}
+
+/* TABLETS */
+@media all and (max-width: 991px) {
+
+    .rodape .linha .redes {
+        display: none;
+    }
+
+    .rodape .row {
+        padding-top: 15px;
+    }
+
+    .rodape .row .redes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    .rodape .row .redes img {
+        height: 40px;
+        padding-right: 5px;
+    }
+
+    .rodape .row h2 {
+        display: none;
+    }
+
+    .rodape .pagamento {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rodape .linha .pagamento {
+        display: none;
+    }
+
+    /* SMARTPHONES */
+    @media all and (max-width: 767px) {
+
+        .rodape .logomarca {
+            width: 130px;
+            height: 46px;
+        }
+
+        .rodape .row .pagamento {
+            display: none;
+        }
+
+        .rodape .row .redes img {
+            height: 35px;
+        }
+
+        .rodape .linha {
+            display: flex;
+            padding-right: 0.75rem;
+        }
+
+        .rodape .linha img {
+            height: 30px;
+        }
+
+        .rodape .linha .pagamento {
+            display: block;
+            width: 50vw;
+        }
+
+        .rodape .linha .pagamento h1 {
+            padding: 0;
+        }
+
+        .rodape .linha .title {
+            font-size: 0.8rem;
+        }
+
+        .rodape .mobile .title {
+            font-size: 0.8rem;
+            font-family: "Roboto-Light";
+            text-transform: uppercase;
+            color: white;
+        }
+
+        .rodape .linha a {
+            font-size: 0.7rem;
+        }
+
+        .rodape .mobile a {
+            font-size: 0.7rem;
+            font-family: "Roboto-Light";
+            text-decoration: none;
+            color: white;
+        }
+
+        .rodape .linha p {
+            font-size: 0.7rem;
+        }
+
+        .rodape .row p {
+            font-size: 0.7rem;
+            padding-top: 15px;
+        }
+
+        .rodape .mobile p {
+            font-size: 0.7rem;
+            font-family: "Roboto-Light";
+            margin-bottom: 0;
+        }
+
+        .rodape .linha .institucional {
+            display: none;
+        }
+
+        .rodape .linha .atendimento {
+            padding-right: 31px;
+        }
+
+        .rodape .mobile .institucional {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rodape .linha .horarios {
+            display: none;
+        }
+
+        .rodape .mobile {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+            padding-top: 15px;
+        }
+
+    }
+
+}

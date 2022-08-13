@@ -1,0 +1,243 @@
+.header-flex {
+    /*flex container */
+    display: flex;
+    height: 90px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header {
+    background-color: #0721A6;
+}
+
+header .Logo {
+    width: 200px;
+    height: 90px;
+}
+
+header .Barra-de-Pesquisa {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 32px;
+    width: 570px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+
+header .img {
+    height: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+header .Pesquisa {
+    width: 550px;
+    height: 32px;
+    padding-left: 5px;
+    border-radius: 30px;
+    border-style: none;
+    outline: 0;
+}
+
+header .Login {
+    display: flex;
+    height: 22px;
+    background: linear-gradient(90deg, #6AA9FF 51.19%, #4895FF 51.2%);
+    width: 100px;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Roboto-Bold";
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+header .Botão-Login {
+    display: flex;
+    width: 190px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .Usuário {
+    height: 45px;
+}
+
+header .Carrinho {
+    height: 47px;
+}
+
+header .mobile-menu-icon {
+    display: none;
+}
+
+header .mobile-menu {
+    display: none;
+}
+
+/* TABLETS */
+@media all and (max-width: 991px) {
+    header .Logo {
+        width: 210px;
+        margin-left: 15px;
+    }
+
+    header .Barra-de-Pesquisa {
+        width: 370px;
+    }
+
+    header .Botão-Login {
+        display: none;
+    }
+
+    header .mobile-menu-icon {
+        display: block;
+        padding-right: 1rem;
+    }
+
+    header .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    header .mobile-menu .Links {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-left: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    header .mobile-menu .Links a {
+        text-decoration: none;
+        font-family: "Roboto-regular";
+        color: white;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-left: 3px dotted white;
+        font-size: 1.4rem;
+    }
+
+    header .mobile-menu .Botão-Login {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        flex-direction: row-reverse;
+        width: 300px;
+        height: 120px;
+        margin-left: 1rem;
+    }
+
+    header .mobile-menu .Botão-Login .Login {
+        height: 40px;
+        width: 140px;
+        font-size: 1.3rem;
+        font-family: "Roboto-Bold";
+        margin-left: 1rem;
+        align-items: center;
+    }
+
+    header .mobile-menu .Botão-Login .Usuário {
+        height: 80px;
+        width: 80px;
+    }
+
+    header .mobile-menu {
+        position: absolute;
+        top: 90px;
+        left: -80%;
+        width: 80%;
+        height: calc(100% - 90px);
+        z-index: 100;
+        opacity: 0;
+        background: rgba(115, 137, 252, 0.95);
+        display: block;
+        padding: 20px 50px;
+        transition: left 0.4s, opacity 0.5s;
+
+    }
+
+    .mostraEscondeMenu {
+        left: 0 !important;
+        opacity: 1 !important;
+    }
+
+}
+
+/* SMARTPHONES */
+@media all and (max-width: 767px) {
+
+    .header-flex {
+        height: 60px;
+    }
+
+    header .Logo {
+        width: 100px;
+    }
+
+    header .Barra-de-Pesquisa {
+        width: 190px;
+        height: 25px;
+    }
+
+    header .Barra-de-Pesquisa .Pesquisa {
+        height: 23px;
+        width: 146px;
+    }
+
+    header .Barra-de-Pesquisa .img {
+        width: 27px;
+    }
+
+    header .Carrinho {
+        width: 33px;
+        height: 33px;
+    }
+
+    header .mobile-menu-icon .icon {
+        width: 30px;
+        height: 30px;
+        padding-left: 5px;
+    }
+
+    header .mobile-menu .Links a {
+        margin-bottom: 10px;
+        border-left: 2px dotted white;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    header .mobile-menu {
+        position: absolute;
+        top: 60px;
+        left: -80%;
+        width: 80%;
+        height: calc(100% - 60px);
+        z-index: 100;
+        opacity: 0;
+        background: rgba(115, 137, 252, 0.95);
+        display: block;
+        padding: 0px 15px;
+        transition: left 0.4s, opacity 0.5s;
+
+    }
+
+    header .mobile-menu .Botão-Login .Login {
+        height: 30px;
+        width: 120px;
+        font-size: 1rem;
+        font-family: "Roboto-Bold";
+        margin-left: 1rem;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    header .mobile-menu .Botão-Login .Usuário {
+        height: 60px;
+        width: 60px;
+    }
+
+}

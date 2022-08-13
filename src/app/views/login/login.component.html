@@ -1,0 +1,38 @@
+<body>
+
+    <div class="container">
+
+        <button class="voltar" type="button">
+
+            <a routerLink=""><img src="assets/Imagens/arrow.png" alt=""></a>
+
+        </button>
+
+        <h1 class="title">Login</h1>
+
+        <form (ngSubmit)="capturarDados()">
+
+            <div class="linha">
+                <img src="assets/Imagens/user (4).png">
+                <input type="text" id="nome" placeholder="Seu nome" name="nome" [(ngModel)]="userModel.nome">
+            </div>
+
+            <div class="linha">
+                <img src="assets/Imagens/email (3).png">
+                <input type="email" id="usuario" placeholder="Seu e-mail" name="usuario" [(ngModel)]="userModel.email">
+            </div>
+
+            <div class="linha">
+                <img src="assets/Imagens/lock (1).png">
+                <input type="password" id="senha" placeholder="*****" name="senha" [(ngModel)]="userModel.senha">
+            </div>
+
+            <p class="mensagem"></p>
+
+            <button class="signin">Log in</button>
+
+        </form>
+
+    </div>
+
+</body>

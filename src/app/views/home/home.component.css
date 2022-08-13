@@ -1,0 +1,299 @@
+section {
+    background-color: #7389FC;
+}
+
+section .Links a {
+    font-family: "Roboto-Regular";
+    text-decoration: none;
+    color: white;
+}
+
+section .Links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    height: 30px;
+}
+
+main {
+    background-image: url(src/assets/Imagens/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+}
+
+.banner-info-box {
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner-info-box .imagem {
+    height: 58vh;
+}
+
+main .banner-info-box .banner {
+    height: 360px;
+}
+
+.banner-info-box .cadastre-se {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-info-box .image {
+    height: 30vh;
+    padding-bottom: 20px;
+}
+
+.banner-info-box .botão {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-family: TitilliumWeb-SemiBold;
+    font-size: 1.5rem;
+    background-color: #EC1C24;
+    width: 16vw;
+    height: 8vh;
+    border-radius: 20px;
+    color: white;
+}
+
+main .carousel-inner {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+/* PRODUTOS */
+
+.produtos {
+    background: linear-gradient(180deg, rgba(99, 123, 252, 0.9) 10.21%, #1A3DF3 45.1%, rgba(0, 0, 0, 1) 83.12%);
+    color: white;
+    padding-bottom: 50px;
+}
+
+.produtos h1 {
+    font-family: "Roboto-Medium";
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.card {
+    max-width: 200px;
+    margin-bottom: 50px;
+    background: linear-gradient(180deg, #000000 0%, #282626 100%);
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 0px 0px 20px #000000;
+    border: 1px solid black;
+}
+
+.card .card-title {
+    font-family: "Roboto-Medium";
+    text-transform: uppercase;
+}
+
+.card .card-text {
+    font-family: "Roboto-Medium";
+}
+
+.card .card-price {
+    font-size: 1.4rem;
+    font-family: "Roboto-Medium";
+}
+
+.card .btn-primary {
+    background-color: #BE1E2D;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: "Roboto-Medium";
+    text-transform: uppercase;
+}
+
+.card .card-img-top {
+    border-radius: 15px 15px 0px 0px;
+}
+
+/* Carousel-Produtos */
+
+.produtos-mobile {
+    display: none;
+    background: linear-gradient(180deg, rgba(99, 123, 252, 0.9) 10.21%, #1A3DF3 45.1%, rgba(0, 0, 0, 1) 83.12%);
+    color: white;
+    padding-bottom: 40px;
+}
+
+.produtos-mobile .row {
+    width: 200px;
+}
+
+.produtos-mobile .produtos-titulo {
+    font-family: "Roboto-Medium";
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 1.4rem;
+}
+
+/* BREAKPOINTS */
+/* 
+    celulares 0 - 767px
+    tablets 768 - 991px
+    desktop >= 992px - 1199px
+    telas grandes >= 1200px - 1920px
+*/
+
+
+/* TABLETS */
+@media all and (max-width: 991px) {
+
+    section .Links {
+        display: none;
+    }
+
+    main {
+        height: 350px;
+    }
+
+    main .banner-info-box {
+        height: 40vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .banner-info-box .imagem {
+        height: 380px;
+    }
+
+    main .banner-info-box .banner {
+        height: 320px;
+    }
+
+    main .banner-info-box .image {
+        height: 220px;
+    }
+
+    main .banner-info-box .botão {
+        height: 60px;
+        width: 30vw;
+        border-radius: 15px;
+    }
+
+    main .carousel-inner {
+        height: 350px;
+        display: flex;
+        align-items: center;
+    }
+
+    .produtos {
+        display: none;
+    }
+
+    .produtos-mobile {
+        display: block;
+    }
+
+    .produtos-mobile .carousel-inner {
+        height: 420px;
+        display: flex;
+        align-items: center;
+    }
+
+    .produtos-mobile .carousel-indicators {
+        margin-bottom: 0;
+    }
+
+    .produtos-mobile .carousel-inner .card {
+        margin: 0 auto;
+        max-width: 24vw;
+    }
+
+    .produtos-mobile .carousel-inner .card-mobile {
+        display: flex;
+        padding: 0 70px;
+    }
+
+    /* SMARTPHONES */
+    @media all and (max-width: 767px) {
+
+        .container {
+            padding: 0;
+        }
+
+        main {
+            height: 250px;
+        }
+
+        main .carousel-inner {
+            height: 250px;
+        }
+
+        main .banner-info-box .esconder {
+            display: none;
+        }
+
+        main .banner-info-box .image {
+            height: 190px;
+        }
+
+        main .banner-info-box .banner {
+            height: 240px;
+        }
+
+        main .banner-info-box .botão {
+            height: 40px;
+            width: 45vw;
+            border-radius: 10px;
+            font-size: 1.3rem;
+        }
+
+        .produtos-mobile .carousel-inner {
+            height: 390px;
+            display: flex;
+            align-items: center;
+        }
+
+        .produtos-mobile .carousel-inner .card {
+            max-width: 39vw;
+        }
+
+        .produtos-mobile .card .card-title {
+            font-size: 1rem;
+            padding-bottom: 0;
+        }
+
+        .produtos-mobile .card .card-text {
+            padding-bottom: 0;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .produtos-mobile .card .card-price {
+            font-size: 1.2rem;
+            padding-bottom: 0;
+            margin-bottom: 0.8rem;
+        }
+
+        .produtos-mobile .card .btn-primary {
+            font-size: 1rem;
+        }
+
+        .produtos-mobile .carousel-inner .card-mobile {
+            padding: 0 38px;
+        }
+
+        .produtos-mobile .carousel-inner .none {
+            display: none;
+        }
+
+    }
+
+}

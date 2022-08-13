@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(assets/fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "TitilliumWeb-SemiBold";
+    src: url(assets/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url(assets/fonts/Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(assets/fonts/Roboto/Roboto-Light.ttf);
+}
+
+/* Reset de páginas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+
+/* CUSTOMIZAÇÃO GERAL DO BOOTSTRAP */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* DESKTOP */
+@media all and (max-width: 1199px) {
+
+    .container,
+    .container-grid {
+        max-width: 980px;
+    }
+}
