@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
 
@@ -13,17 +14,29 @@ export class LoginComponent implements OnInit {
   mensagem: string = ""
 
   constructor(
-    private userService: UserService
+    private userService: UserService, private router: Router
   ) { }
 
   ngOnInit(): void {
   }
 
   validaLogin(): boolean {
+
+    let blackList = ["SELECT", "OR",' ""="" ', "-- ", "; ", "1 = 1", "1=1", "DROP", "\"\"=\"\"", "'='"];
+
+    let ataque = 0;
+
+    blackList.forEach((palavra) => {
+      if(this.userModel.email?.toUpperCase().includes(palavra)) {
+        ataque++;
+      }
+    })
+
     if (
       this.userModel.nome === undefined || this.userModel.nome === '' ||
       this.userModel.email === undefined || this.userModel.email === '' ||
-      this.userModel.password === undefined || this.userModel.password === ''
+      this.userModel.password === undefined || this.userModel.password === '' ||
+      ataque > 0
       ) { 
         return false;
       } else {
@@ -43,6 +56,7 @@ export class LoginComponent implements OnInit {
           // arrow function pega o contexto local
           // console.log(responsse);
           this.mensagem = `Logado com sucesso! ${response.status} ${response.statusText}`
+          // this.router.navigate([''])
 
         }, error: (e) => {
           // console.log('DEU RUIMMMMMM', e.error);
@@ -51,7 +65,7 @@ export class LoginComponent implements OnInit {
       })
 
     } else {
-      this.mensagem = "Preencher todos os campos"
+      this.mensagem = "Preencher todos os campos corretamente"
     }
 
   }
